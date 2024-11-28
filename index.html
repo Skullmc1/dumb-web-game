@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robot Fight Animation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="particles"></div>
+    <h1 class="game-title">ROBOT BATTLE</h1>
+
+    <div class="controls-guide left">
+        <p>Left Robot Controls:</p>
+        <p>W: Jump</p>
+        <p>A: Normal Attack</p>
+        <p>S: Special Attack</p>
+    </div>
+
+    <div class="controls-guide right">
+        <p>Right Robot Controls:</p>
+        <p>↑: Jump</p>
+        <p>←: Normal Attack</p>
+        <p>↓: Special Attack</p>
+    </div>
+    <div class="arena">
+        <div class="health-bars">
+            <div class="health-bar defender-health">
+                <div class="health-fill"></div>
+                <div class="health-text">100%</div>
+            </div>
+            <div class="health-bar attacker-health">
+                <div class="health-fill"></div>
+                <div class="health-text">100%</div>
+            </div>
+        </div>
+        <div class="robot attacker">
+            <div class="head"></div>
+            <div class="body"></div>
+            <div class="arm"></div>
+        </div>
+        <div class="robot defender">
+            <div class="head"></div>
+            <div class="body"></div>
+            <div class="arm"></div>
+        </div>
+    </div>
+    <div class="fight-buttons">
+        <div class="bot-controls">
+            <button id="defenderButton">Left Attack!</button>
+            <button id="defenderSpecial" class="special-attack">Special Attack!</button>
+            <div id="defenderCooldown" class="cooldown-text"></div>
+        </div>
+        <div class="bot-controls">
+            <button id="attackerButton">Right Attack!</button>
+            <button id="attackerSpecial" class="special-attack">Special Attack!</button>
+            <div id="attackerCooldown" class="cooldown-text"></div>
+        </div>
+    </div>
+    <div class="popup" id="winPopup">
+        <div class="popup-content">
+            <h2 id="winnerText"></h2>
+            <button id="playAgainBtn">Play Again</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
